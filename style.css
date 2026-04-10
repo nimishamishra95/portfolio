@@ -16,7 +16,6 @@ nav li {
     display: contents;
 }
 
-/* Step 2.2: Flexbox nav layout */
 nav {
   display: flex;
 }
@@ -76,6 +75,32 @@ button {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  margin: 0;
+}
+
+.projects article h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
 * {
