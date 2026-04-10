@@ -1,39 +1,26 @@
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
-}
-
-body {
-    font: 100%/1.5 system-ui;
-    max-width: 100ch;
-    margin-inline: max(1em, (100% - 100ch) / 2);
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
 }
 
 nav ul,
 nav li {
-    display: contents;
+  display: contents;
 }
 
 nav {
   display: flex;
+  margin-bottom: 1em;
+  border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 nav a {
   flex: 1;
-}
-
-nav a {
   text-decoration: none;
   color: inherit;
   text-align: center;
   padding: 0.5em;
-}
-
-nav {
-  margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 nav a.current {
@@ -41,15 +28,32 @@ nav a.current {
   padding-bottom: 0.1em;
 }
 
-:root {
-  --color-accent: oklch(65% 50% 0);
-  accent-color: var(--color-accent);
-}
-
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
   background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+body {
+  accent-color: var(--color-accent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 input, textarea, button {
@@ -72,11 +76,6 @@ button {
   grid-column: 1 / -1;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -94,15 +93,56 @@ img {
   margin: 0;
 }
 
-h1 {
-  font-size: 400%;
+main > header {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1;
-  text-wrap: balance;
+main > header h1 {
+  font-size: 200%;
+  margin: 0;
 }
 
-* {
-    overflow: visible;
+main > header p {
+  margin: 0.2em 0;
+  color: oklch(50% 0% 0);
+}
+
+section {
+  margin-block: 2em;
+}
+
+section > header h2 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  padding-bottom: 0.25em;
+  margin-bottom: 0.75em;
+}
+
+main > section article {
+  margin-bottom: 1.2em;
+}
+
+main > section article h3 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.05em;
+}
+
+main > section article p,
+main > section article time {
+  margin: 0;
+  color: oklch(50% 0% 0);
+  font-size: 0.95em;
+}
+
+main > section article ul {
+  margin-top: 0.4em;
+  padding-left: 1.5em;
+}
+
+main > section article li {
+  margin-bottom: 0.2em;
 }
