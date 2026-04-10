@@ -6,9 +6,9 @@ body {
 }
 
 body {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 16px;
+    font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: max(1em, (100% - 100ch) / 2);
 }
 
 img {
