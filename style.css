@@ -56,7 +56,7 @@ img {
   height: auto;
 }
 
-input, textarea, button {
+input, textarea, button, select {
   font: inherit;
 }
 
@@ -145,4 +145,28 @@ main > section article ul {
 
 main > section article li {
   margin-bottom: 0.2em;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+}
+
+nav a.current {
+  border-bottom-color: var(--border-color);
+}
+
+nav a:hover {
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
 }
