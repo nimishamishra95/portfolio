@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "An interactive Mapbox visualization of BlueBike station traffic across Boston and Cambridge. Plots 260K+ rides from March 2024, sizing stations by traffic volume and coloring them by arrival/departure ratio. Includes a time-of-day slider to filter activity patterns in real time.",
+    "url": "https://nimishamishra95.github.io/bikewatching/"
+  },
+  {
     "title": "Personal Portfolio Website",
     "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
