@@ -269,7 +269,6 @@ nav a:hover {
   }
 }
 
-/* ── Meta page: summary stats ─────────────────────────────────────────── */
 dl.stats {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -292,7 +291,6 @@ dl.stats dd {
   align-self: end;
 }
 
-/* ── Scatterplot dots ────────────────────────────────────────────────────── */
 circle {
   transition: 200ms;
   transform-origin: center;
@@ -309,7 +307,6 @@ circle.selected {
   fill-opacity: 1 !important;
 }
 
-/* ── Gridlines ──────────────────────────────────────────────────────────── */
 .gridlines line {
   stroke: oklch(70% 3% 200);
   stroke-opacity: 0.4;
@@ -319,7 +316,6 @@ circle.selected {
   display: none;
 }
 
-/* ── Tooltip ────────────────────────────────────────────────────────────── */
 dl.info {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -363,7 +359,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
   z-index: 100;
 }
 
-/* ── Brush selection styling ────────────────────────────────────────────── */
 @keyframes marching-ants {
   to {
     stroke-dashoffset: -8;
@@ -378,9 +373,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
   animation: marching-ants 2s linear infinite;
 }
 
-/* ── LAB 8 ADDITIONS — append these to the bottom of style.css ── */
-
-/* ── Scrollytelling layout ──────────────────────────────────────── */
 #scrolly-1 {
   position: relative;
   display: flex;
@@ -404,7 +396,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
   overflow-y: auto;
 }
 
-/* ── Scrollytelling steps ───────────────────────────────────────── */
 .step {
   padding: 1em;
   margin-bottom: 1em;
@@ -420,7 +411,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
   color: var(--color-accent);
 }
 
-/* ── Circle entry transition ────────────────────────────────────── */
 circle {
   transition: all 200ms, r calc(var(--r, 5) * 10ms);
 }
@@ -431,7 +421,6 @@ circle {
   }
 }
 
-/* ── File unit visualization ────────────────────────────────────── */
 #files {
   display: grid;
   grid-template-columns: 1fr 4fr;
