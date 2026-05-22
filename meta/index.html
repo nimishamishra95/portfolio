@@ -13,37 +13,67 @@
             <p>Stats and visualizations about the codebase powering this portfolio.</p>
         </header>
 
+        <!-- Time slider -->
+        <div style="display: flex; flex: 1; align-items: baseline; gap: 1em; margin-bottom: 1em;">
+            <label style="display: flex; flex: 1; align-items: baseline; gap: 0.5em;">
+                Show commits until:
+                <input
+                    type="range"
+                    id="commit-progress"
+                    min="0"
+                    max="100"
+                    value="100"
+                    style="flex: 1;"
+                />
+                <time id="commit-time" style="margin-left: auto; font-weight: 600; white-space: nowrap;"></time>
+            </label>
+        </div>
+
         <section>
             <header><h2>Summary Stats</h2></header>
             <div id="stats"></div>
         </section>
 
-        <section>
-            <header><h2>Commits by Time of Day</h2></header>
-            <div id="chart"></div>
+        <!-- Scrollytelling wrapper -->
+        <div id="scrolly-1">
+            <div id="scatter-story"></div>
 
-            <dl id="commit-tooltip" class="info tooltip" hidden>
-                <dt>Commit</dt>
-                <dd><a href="" id="commit-link" target="_blank"></a></dd>
-                <dt>Date</dt>
-                <dd id="commit-date"></dd>
-                <dt>Time</dt>
-                <dd id="commit-time"></dd>
-                <dt>Author</dt>
-                <dd id="commit-author"></dd>
-                <dt>Lines Edited</dt>
-                <dd id="commit-lines"></dd>
-            </dl>
+            <div id="scatter-plot">
+                <section>
+                    <header><h2>Commits by Time of Day</h2></header>
+                    <div id="chart"></div>
+
+                    <dl id="commit-tooltip" class="info tooltip" hidden>
+                        <dt>Commit</dt>
+                        <dd><a href="" id="commit-link" target="_blank"></a></dd>
+                        <dt>Date</dt>
+                        <dd id="commit-date"></dd>
+                        <dt>Time</dt>
+                        <dd id="commit-time-tooltip"></dd>
+                        <dt>Author</dt>
+                        <dd id="commit-author"></dd>
+                        <dt>Lines Edited</dt>
+                        <dd id="commit-lines"></dd>
+                    </dl>
+                </section>
+
+                <section>
+                    <header><h2>Selection</h2></header>
+                    <p id="selection-count">No commits selected</p>
+                    <dl id="language-breakdown" class="stats"></dl>
+                </section>
+            </div>
+        </div>
+
+        <!-- File unit visualization (below scrolly) -->
+        <section>
+            <header><h2>File Sizes</h2></header>
+            <dl id="files"></dl>
         </section>
 
-        <section>
-            <header><h2>Selection</h2></header>
-            <p id="selection-count">No commits selected</p>
-            <dl id="language-breakdown" class="stats"></dl>
-        </section>
     </main>
 
     <script src="/portfolio/global.js" type="module"></script>
-    <script src="main.js" type="module"></script>
+    <script src="meta.js" type="module"></script>
 </body>
 </html>

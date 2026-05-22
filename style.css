@@ -377,3 +377,107 @@ dl.info[hidden]:not(:hover, :focus-within) {
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
 }
+
+/* ── LAB 8 ADDITIONS — append these to the bottom of style.css ── */
+
+/* ── Scrollytelling layout ──────────────────────────────────────── */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
+  overflow-y: auto;
+}
+
+/* ── Scrollytelling steps ───────────────────────────────────────── */
+.step {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-left: 3px solid var(--color-accent);
+  background: color-mix(in oklch, canvas 95%, var(--color-accent));
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+  padding-bottom: 4em;
+}
+
+.step a {
+  color: var(--color-accent);
+}
+
+/* ── Circle entry transition ────────────────────────────────────── */
+circle {
+  transition: all 200ms, r calc(var(--r, 5) * 10ms);
+}
+
+@starting-style {
+  circle {
+    r: 0;
+  }
+}
+
+/* ── File unit visualization ────────────────────────────────────── */
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0.5em 0;
+  margin: 0;
+
+  > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: start;
+  }
+
+  dt {
+    grid-column: 1;
+    padding-top: 0.6em;
+  }
+
+  dt code {
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+
+  dt small {
+    display: block;
+    font-size: 0.75em;
+    opacity: 0.6;
+    margin-top: 0.15em;
+  }
+
+  dd {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    gap: 0.15em;
+    padding-top: 0.6em;
+    margin-left: 0;
+  }
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color, steelblue);
+  border-radius: 50%;
+}
